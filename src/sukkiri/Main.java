@@ -2,8 +2,8 @@ package sukkiri;
 
 public class Main {
 	  public static void main(String[] args) { 
-		  String age = "31";
-		  int n = Integer.parseInt(age);
-		  System.out.println("あなたは来年" + (n + 1) + "際になりますね。");
+//		  ランダムに数字を出す
+		  int r = new java.util.Random().nextInt(90);
+		  System.out.println("あなたはたぶん、" + r + "歳ですね?"  );
 	    }
 	}
