@@ -2,15 +2,13 @@ package sukkiri;
 
 public class Main {
 	  public static void main(String[] args) { 
-//		  int 型の変数 x、y にそれぞれ数値を入力し、x が ｙ より大きい場合には“xはyより大きい”、x が y より小さい場合には“xはyより小さい”、x と y が等しい場合には“xとyは等しい”と表示するプログラムを作成しなさい。
-		  int x = 9;
-		  int y = 7;
-		  if (x > y) {
-			  System.out.println("xはyより大きい");
-		  } else if(x < y) {
-			  System.out.println("xはyより小さい");
-		  } else {
-			  System.out.println("xとyは等しい");
-		  }
+//		  正の整数値を入力し、それが偶数か奇数かを判定するプログラムを作成しなさい。
+		  int x = 4;
+		if(x % 2 == 0) {
+			System.out.println("偶数");
+		} else if (x % 2 == 1) {
+			System.out.println("奇数");
+		}
+		  
 	    }
 	}
