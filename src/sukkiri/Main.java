@@ -2,18 +2,11 @@ package sukkiri;
 
 public class Main {
 	  public static void main(String[] args) { 
-		  System.out.println("【数当てゲーム】");
-		  int ans = new java.util.Random().nextInt(10);
-		  for(int num = 0; num < 6; num++) {
-			  System.out.print("0~9までの数字を入力してください");
-			  num = new java.util.Scanner(System.in).nextInt();
-			  if(num == ans) {
-				  System.out.println("アタリ!");
-				  break;
-			  } else {
-				  System.out.println("違います");
-			  }
-		  }
-		  System.out.println("ゲームを終了します");
+//		  int 型の変数 x、y にそれぞれ数値を入力し、x が y より大きい場合に、“xはyより大きい。”という文を表示するプログラムを作成しなさい。
+		 int x = 8;
+		 int y = 7;
+		 if(x > y) {
+			 System.out.println("xはyより大きい。");
+		 }
 	    }
 	}
