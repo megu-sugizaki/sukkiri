@@ -2,12 +2,12 @@ package sukkiri;
 
 public class Main {
 		 public static void main(String[] args) {
-			 add(100, 20);
-			 add(200, 50);
+			 int ans = add(100, 10);
+			 System.out.println("10 + 100 = " + ans);
 		 }
 		 
-		 public static void add(int x, int y) {
+		 public static int add(int x, int y) {
 			 int ans = x + y;
-			 System.out.println(x + "+" + y + "=" + ans);
+			 return ans;
 		 }
 	}
