@@ -1,21 +1,22 @@
 package sukkiri;
 
 public class Main {
-	public static void email(String title, String address, String text) {
-		System.out.println(address + "に、以下のメールを送信しました");
-		System.out.println("件名：" + title);
-		System.out.println("本文:" + text);
+	public static double calcTriangleArea(double length, double height) {
+		return length * height / 2;
 	}
 	
-	public static void email(String address, String text) {
-		System.out.println(address + "に、以下のメールを送信しました");
-		System.out.println("件名：無題");
-		System.out.println("本文：" + text);
+	public static double calcCircleArea(double radius, final double PI) {
+		return radius * radius * PI;
 	}
 	
 	public static void main(String[] args) {
-		email("問い合わせ", "admin@admin", "本日は何時からですか");
-		System.out.println("-------------------------------");
-		email("address@address", "集合場所を教えてください");
+		double length = 2;
+		double height = 3;
+		double radius = 2;
+		final double PI = 3.14;
+		System.out.println("三角形の底辺の長さが" + length + "cm、高さが" + height + "cmの場合、面積は" + calcTriangleArea(length, height) + "㎠");
+		System.out.println("円の半径が" + radius + "cmの場合、面積は" + calcCircleArea(radius, PI) + "㎠");
+		
 	}
+	
 }
