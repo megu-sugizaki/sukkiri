@@ -1,16 +1,13 @@
 package sukkiri;
 
 public class Main {
-	public static void introduceOneself(String name, int age, double height, char zodiac) {
-		
-		
-		System.out.println("名前は" + name + "です");
-		System.out.println("歳は" + age + "歳です");
-		System.out.println("身長は" + height + "cmです");
-		System.out.println("干支は" + zodiac + "です");
+	public static void email(String title, String address, String text) {
+		System.out.println(address + "に、以下のメールを送信しました");
+		System.out.println("件名：" + title);
+		System.out.println("本文:" + text);
 	}
 	
-	public static void main (String[] args) {		
-		introduceOneself("めぐ", 29, 154, '戌');
+	public static void main(String[] args) {
+		email("問い合わせ", "admin@admin", "本日は何時からですか");
 	}
 }
