@@ -8,12 +8,6 @@ public class Main {
 		System.out.println("足すと" + total + "、引くと" + delta);
 	}
 	
-	public static int tasu(int a, int b) {
-		return (a + b);
-	}
 	
-	public static int hiku(int a, int b) {
-		return (a - b);
-	}
 	
 }
