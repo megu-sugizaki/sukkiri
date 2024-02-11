@@ -27,3 +27,7 @@ public class Cleric {
 		return recoverActual;
 	}
 }
+
+// mp = 5, 1秒祈ってmpが3増えたとすると、mp = 8, 10 - 5 = 5, recover = 3 minの中身は(5, 3)で小さい方3をとる mpは 8.
+// mp = 5, 4秒祈ってmpが6増えたとすると、mp = 11, 10 - 5 = 5, recover = 6 minの中身は(5, 6)で小さい方5をとる mpは 10.
+//　mpとMAXMPの差以上のrecoverをしてしまうことはできない
