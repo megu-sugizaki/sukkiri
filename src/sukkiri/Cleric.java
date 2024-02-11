@@ -12,4 +12,14 @@ public class Cleric {
 		this.mp -= 5;
 		this.hp = MAXHP;
 	}
+	
+	public int pray(int sec) {
+		int rand = new java.util.Random().nextInt(2);
+		if((mp + rand + sec) < MAXMP) {
+			mp += (rand + sec);
+		} else if ((mp + rand + sec) >= MAXMP){
+			mp = MAXMP;
+		}
+		return mp;
+	}
 }
