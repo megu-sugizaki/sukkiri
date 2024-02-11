@@ -4,22 +4,26 @@ public class Cleric {
 	
 	String name ;
 	int hp = 50;
-	final int MAXHP = 50;
+	final int MAX_HP = 50;
 	int mp = 10;
-	final int MAXMP = 10;
+	final int MAX_MP = 10;
 	
 	public void selfAid() {
+		System.out.println("セルフエイドを唱えた");
+		this.hp = this.MAX_HP;
 		this.mp -= 5;
-		this.hp = MAXHP;
+		System.out.println("HPが最大まで回復した");
 	}
 	
 	public int pray(int sec) {
-		int rand = new java.util.Random().nextInt(2);
-		if((mp + rand + sec) < MAXMP) {
-			mp += (rand + sec);
-		} else if ((mp + rand + sec) >= MAXMP){
-			mp = MAXMP;
-		}
-		return mp;
+		
+		System.out.println(this.name + "は、" + sec + "秒天に祈った");
+		
+		int recover = new java.util.Random().nextInt(3) + sec;
+		int recoverActual = Math.min(this.MAX_MP - this.mp, recover);
+		this.mp += recoverActual;
+		
+		System.out.println("MPが" + recoverActual + "回復した");
+		return recoverActual;
 	}
 }
