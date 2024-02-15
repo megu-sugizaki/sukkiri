@@ -7,7 +7,6 @@ public class Main{
 		s.damage = 10;
 		Hero h = new Hero();
 		h.name = "ミナト";
-		h.hp = 100;
 //		ここにsを代入しているのがいまいちわからない。→h.swordというのは、Swordの新しいインスタンスを作っている。そのSwordの名前は炎の剣。
 //		今のままだとSwordはあるけれどhに紐づいていない状態。hのために新しくSwordを生んだ。
 		h.sword = s;
@@ -16,10 +15,8 @@ public class Main{
 		
 		Hero h1 = new Hero();
 		h1.name = "ミナト";
-		h1.hp = 100;
 		Hero h2 = new Hero();
 		h2.name = "アサカ";
-		h2.hp = 100;
 		Wizard w = new Wizard();
 		w.name = "スガワラ";
 		w.hp = 50;
@@ -27,6 +24,8 @@ public class Main{
 		w.heal(h1);
 		w.heal(h2);
 		w.heal(h2);
+		
+		System.out.println(h.hp);
 		
 //		Matango m1 = new Matango();
 //		m1.hp = 50;
