@@ -10,6 +10,11 @@ public class Hero {
 		this.name = name;
 	}
 	
+	public Hero() {
+		this.hp = 100;
+		this.name = "ダミー";
+	}
+	
 	public void sleep() {
 		this.hp = 100;
 		System.out.println(this.name + "は眠って回復した！");

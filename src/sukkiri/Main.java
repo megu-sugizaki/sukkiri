@@ -13,7 +13,7 @@ public class Main{
 		System.out.println("現在の武器は" + h.sword.name);
 		System.out.println(h.name + "は" + h.sword.name + "で攻撃した");
 		
-		Hero h1 = new Hero("ミナト");
+		Hero h1 = new Hero();
 		Hero h2 = new Hero("アサカ");
 		Wizard w = new Wizard();
 		w.name = "スガワラ";
