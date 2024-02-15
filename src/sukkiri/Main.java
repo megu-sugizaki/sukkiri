@@ -14,6 +14,19 @@ public class Main{
 		System.out.println("現在の武器は" + h.sword.name);
 		System.out.println(h.name + "は" + h.sword.name + "で攻撃した");
 		
+		Hero h1 = new Hero();
+		h1.name = "ミナト";
+		h1.hp = 100;
+		Hero h2 = new Hero();
+		h2.name = "アサカ";
+		h2.hp = 100;
+		Wizard w = new Wizard();
+		w.name = "スガワラ";
+		w.hp = 50;
+		
+		w.heal(h1);
+		w.heal(h2);
+		w.heal(h2);
 		
 //		Matango m1 = new Matango();
 //		m1.hp = 50;
