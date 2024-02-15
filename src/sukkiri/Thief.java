@@ -20,6 +20,4 @@ public class Thief {
 		this(name, 40, 5);
 	}
 	
-	
-	
 }
