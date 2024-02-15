@@ -8,9 +8,11 @@ public class Main{
 		Hero h = new Hero();
 		h.name = "ミナト";
 		h.hp = 100;
-//		ここにsを代入しているのがいまいちわからない。
+//		ここにsを代入しているのがいまいちわからない。→h.swordというのは、Swordの新しいインスタンスを作っている。そのSwordの名前は炎の剣。
+//		今のままだとSwordはあるけれどhに紐づいていない状態。hのために新しくSwordを生んだ。
 		h.sword = s;
 		System.out.println("現在の武器は" + h.sword.name);
+		System.out.println(h.name + "は" + h.sword.name + "で攻撃した");
 		
 		
 //		Matango m1 = new Matango();
