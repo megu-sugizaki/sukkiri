@@ -5,7 +5,7 @@ public class Main{
 		Sword s = new Sword();
 		s.name = "炎の剣";
 		s.damage = 10;
-		Hero h = new Hero();
+		Hero h = new Hero("ミナト");
 		h.name = "ミナト";
 //		ここにsを代入しているのがいまいちわからない。→h.swordというのは、Swordの新しいインスタンスを作っている。そのSwordの名前は炎の剣。
 //		今のままだとSwordはあるけれどhに紐づいていない状態。hのために新しくSwordを生んだ。
@@ -13,10 +13,8 @@ public class Main{
 		System.out.println("現在の武器は" + h.sword.name);
 		System.out.println(h.name + "は" + h.sword.name + "で攻撃した");
 		
-		Hero h1 = new Hero();
-		h1.name = "ミナト";
-		Hero h2 = new Hero();
-		h2.name = "アサカ";
+		Hero h1 = new Hero("ミナト");
+		Hero h2 = new Hero("アサカ");
 		Wizard w = new Wizard();
 		w.name = "スガワラ";
 		w.hp = 50;
