@@ -6,5 +6,5 @@ public class Main{
 	}
 	
 	Hero h = new Hero();
-	PoisonMatango mp = new PoisonMatango();
+	PoisonMatango mp = new PoisonMatango('A');
 }

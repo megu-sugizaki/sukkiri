@@ -2,21 +2,20 @@ package sukkiri;
 
 public class PoisonMatango extends Matango{
 	
-	int attackCount;
+	int poisonCount = 5;
 	
-	public PoisonMatango() {
-		super('A');
+	public PoisonMatango(char suffix) {
+		super(suffix);
 	}
 	
 	public void poisonAttack(Hero h) {
 		super.attack(h);
-		for (int i = 5; i > 0; i --) {
-				if(i > 0) {
-				i = this.attackCount;
-				System.out.println("さらに毒の胞子をばらまいた");
-				int damagePoint = h.hp -= hp/0.2;
-				System.out.println(damagePoint + "ポイントのダメージ");
-			}
+		if (this.poisonCount > 0){
+			System.out.println("さらに毒の胞子をばらまいた！");
+			int dmg = h.hp/5;
+			h.hp -= dmg;
+			System.out.println(dmg + "ポイントのダメージ");
+			this.poisonCount --;
 		}
-	}
+		}
 }
