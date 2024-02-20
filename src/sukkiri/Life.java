@@ -1,5 +1,5 @@
 package sukkiri;
 
-public class Life {
-
+public interface Life {
+	
 }
