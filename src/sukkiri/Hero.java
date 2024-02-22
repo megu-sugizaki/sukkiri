@@ -6,4 +6,9 @@ public class Hero extends Character {
 		System.out.println("敵に10ポイントのダメージを与えた");
 		m.hp -= 10;
 	}
+	
+	public void attack(Goblin g) {
+		System.out.println("敵に10ポイントのダメージを与えた！");
+		g.hp -= 10;
+	}
 }
