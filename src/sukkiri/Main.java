@@ -2,19 +2,12 @@ package sukkiri;
 
 public class Main{
 	public static void main (String[] args) {
-		A[] a = new A[2];
-		B[] b = new B[2];
+		Y[] array = new Y[2];
+		array [0] = new A();
+		array [1] = new B();
 		
-		a[0] = new A();
-		a[1] = new A();
-		a[2] = new A();
-		
-		b[0] = new B();
-		b[0] = new B();
-		b[0] = new B();
-		
-		for (A aa : a) {
-			System.out.println(a[1]);
+		for (Y y : array) {
+			y.b();
 		}
 	}
 }
