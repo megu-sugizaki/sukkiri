@@ -1,17 +1,14 @@
 package sukkiri;
 
-public class Wizard extends Character {
-	int mp;
-	public void attack(Matango m) {
-		System.out.println(this.name + "の攻撃！");
-		System.out.println("敵に3ポイントのダメージ");
-		m.hp -= 3;
-	}
-	
-	public void fireball(Matango m) {
-		System.out.println(this.name + "は火の玉を放った");
-		System.out.println("敵に20ポイントのダメージ");
-		m.hp -= 20;
-		this.mp -= 5;
+public class Wizard{
+	private int hp;
+	private int mp;
+	private String name;
+	private Wand wand;
+	public void heal (Hero h) {
+		int basePoint = 10;
+		int recoverPoint = (int)(basePoint + this.wand.power);
+		h.setHp(h.getHp()+recoverPoint);
+		System.out.println(h.getName()+"のHPを" + recoverPoint + "回復した");
 	}
 }
