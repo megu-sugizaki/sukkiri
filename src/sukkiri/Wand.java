@@ -17,6 +17,12 @@ public class Wand {
 	}
 	
 	public void setPower(double power) {
+		if(power < 0.5) {
+			throw new IllegalArgumentException("パワーが少な過ぎます");
+		}
+		if (power > 100) {
+			throw new IllegalArgumentException("パワーが多過ぎます");
+		}
 		this.power = power;
 	}
 }
