@@ -2,7 +2,8 @@ package sukkiri;
 
 public class Main{
 	public static void main (String[] args) {
-	Hero h = new Hero();
-	h.setName("");
-	}
+	Empty e = new Empty();
+	String s = e.toString();
+	System.out.println(s);
+}
 }
