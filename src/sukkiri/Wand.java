@@ -9,6 +9,12 @@ public class Wand {
 	}
 	
 	public void setName(String name) {
+		if (name == null) {
+			throw new IllegalArgumentException("名前がありません。処理を中断");
+		}
+		if (name.length()<3) {
+			throw new IllegalArgumentException("名前が短過ぎます。処理を中断");
+		}
 		this.name = name;
 	}
 	
