@@ -11,5 +11,7 @@ public class Main{
 		System.out.println(d);
 		Date now = new Date();
 		c.setTime(now);
+		int y = c.get(Calendar.YEAR);
+		System.out.println("今年は" + y + "年です");
 	}
 	}
