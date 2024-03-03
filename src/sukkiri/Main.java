@@ -1,15 +1,15 @@
 package sukkiri;
-import java.time.LocalDate;
-import java.time.Period;
+import java.util.ArrayList;
 
 public class Main{
 	public static void main (String[] args) {
-		LocalDate d1 = LocalDate.of(2020, 1,1);
-		LocalDate d2 = LocalDate.of(2020, 1,4);
+		ArrayList<Integer> points = new ArrayList<Integer>();
+		points.add(10);
+		points.add(80);
+		points.add(75);
 		
-		Period p1 = Period.ofDays(3);
-		Period p2 = Period.between(d1,  d2);
-		
-		LocalDate d3 = d2.plus(p2);
+		for (int i : points) {
+			System.out.println(i);
+		}
 	}
 }
