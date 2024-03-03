@@ -1,13 +1,19 @@
 package sukkiri;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Main{
-	public static void main(String args[]){
-		LocalDateTime l1 = LocalDateTime.now();
-		LocalDateTime l2 = LocalDateTime.of(2020,1,1,9,5,0,0);
-		ZonedDateTime z1 = l2.atZone(ZoneId.of("Europe/London"));
-		LocalDateTime l3 = z1.toLocalDateTime();		
+	public static void main (String[] args) {
+		DateTimeFormatter fmt = DateTimeFormatter.ofPattern("yyyy/mm/dd");
+		LocalDate ldate = LocalDate.parse("2020/09/22", fmt);
+		
+		LocalDate ldatep = ldate.plusDays(1000);
+		String str = ldatep.format(fmt);
+		System.out.println("1000日後は" + str);
+		
+		LocalDate now = LocalDate.now();
+		if(now.isAfter(ldatep)) {
+			System.out.println("1000日後は過去日付です");
+		}
 	}
-	}
+}
