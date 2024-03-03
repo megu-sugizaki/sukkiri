@@ -2,7 +2,7 @@ package sukkiri;
 import java.util.ArrayList;
 import java.util.List;
 
-class Hero{
+class Hero {
 	public String name;
 }
 
