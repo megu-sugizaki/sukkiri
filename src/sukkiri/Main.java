@@ -3,13 +3,13 @@ import java.io.FileWriter;
 
 public class Main{
 	public static void main (String[] args) {
-		FileWriter fw = null;
 		try {
-			fw = new FileWriter("data.text");
+			FileWriter fw = new FileWriter("data.text");
 			fw.write("hello");
 		} catch (Exception e) {
-			System.out.println("エラーです");
+			System.out.println("何らかの例外が発生しました");
+		} finally {
+			fw.close();
 		}
-		fw.close();
 	}
 }
