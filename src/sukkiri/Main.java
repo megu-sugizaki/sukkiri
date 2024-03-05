@@ -1,5 +1,6 @@
 package sukkiri;
 import java.io.FileWriter;
+import java.io.IOException;
 
 public class Main{
 	public static void main (String[] args) {
@@ -10,9 +11,13 @@ public class Main{
 		} catch (Exception e) {
 			System.out.println("何らかの例外が発生しました");
 		} finally {
-			fw.close();
-		} catch(Exception e) {
-			;
-		}
+			if(fw != null) {
+				try {
+					fw.close();
+				} catch (IOException e){
+					;
+				}
+			}
+		} 
 	}
 }
