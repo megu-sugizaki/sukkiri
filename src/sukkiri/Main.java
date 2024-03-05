@@ -3,7 +3,7 @@ import java.io.FileWriter;
 
 public class Main{
 	public static void main (String[] args) {
-		FileWriter fw;
+		FileWriter fw = null;
 		try {
 			fw = new FileWriter("data.text");
 			fw.write("hello");
@@ -11,6 +11,8 @@ public class Main{
 			System.out.println("何らかの例外が発生しました");
 		} finally {
 			fw.close();
+		} catch(Exception e) {
+			;
 		}
 	}
 }
