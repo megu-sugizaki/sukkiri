@@ -1,11 +1,15 @@
 package sukkiri;
-import java.io.*;
+import java.io.InputStream;
+import java.net.URL;
 
 public class Main{
-	FileWriter fw = new FileWriter("data.txt");
-	fw.write('そ');
-	fw.write('れ');
-	fw.write('で');
-	fw.write('は');
-	fw.close;
+	public static void main (String[] args) throws Exception{
+	URL u = new URL("https://book.impress.co.jp/");
+	InputStream is = u.openStream();
+	int i = is.read();
+	while(i != -1) {
+		char c = (char)i;
+		System.out.print(c);
+		i = is.read();
+	}
 }
